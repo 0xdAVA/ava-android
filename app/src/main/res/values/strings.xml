@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AVA</string>
+    <string name="facebook_app_id">224803198063152</string>
+    <string name="registerText"><![CDATA[아이디가 없으신가요?<b>회원가입</b>]]></string>
 </resources>
