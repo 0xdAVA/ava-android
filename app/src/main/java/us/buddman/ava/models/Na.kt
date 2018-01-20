@@ -1,5 +1,6 @@
 package us.buddman.ava.models
 
+import java.io.Serializable
 import java.util.*
 
 /**
@@ -19,4 +20,4 @@ data class Na(
         var photo: String,
         var select_type : Int,
         var comment : ArrayList<Comment>
-)
+) : Serializable

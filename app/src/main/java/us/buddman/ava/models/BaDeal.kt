@@ -1,5 +1,6 @@
 package us.buddman.ava.models
 
+import java.io.Serializable
 import java.util.ArrayList
 
 /**
@@ -17,4 +18,4 @@ data class BaDeal(
        var master_delivery_number : String,
        var slave_delivery_number : String,
        var comment : ArrayList<Comment>?
-)
+) : Serializable

@@ -1,5 +1,6 @@
 package us.buddman.ava.models
 
+import java.io.Serializable
 import java.util.*
 
 /**
@@ -19,4 +20,4 @@ data class Ba(
        var send_type : Number ,
        var photo : String,
        var comment : ArrayList<Ba>?
-)
+) : Serializable

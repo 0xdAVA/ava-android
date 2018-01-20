@@ -1,5 +1,6 @@
 package us.buddman.ava.models
 
+import java.io.Serializable
 import java.util.*
 
 /**
@@ -14,4 +15,4 @@ data class Ah(
         var date: Date,
         var photo: String,
         var like: Int
-)
+) : Serializable

@@ -1,5 +1,6 @@
 package us.buddman.ava.models
 
+import java.io.Serializable
 import java.util.*
 
 /**
@@ -16,5 +17,4 @@ data class NaDeal(
        var delivery_number : String,
        var item : Na,
        var comment : ArrayList<Comment>
-
-)
+) : Serializable

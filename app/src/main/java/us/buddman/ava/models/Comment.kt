@@ -1,5 +1,6 @@
 package us.buddman.ava.models
 
+import java.io.Serializable
 import java.util.*
 
 /**
@@ -12,4 +13,4 @@ data class Comment(
        var post_token : String,
        var comment_token : String,
        var date : Date
-)
+) : Serializable

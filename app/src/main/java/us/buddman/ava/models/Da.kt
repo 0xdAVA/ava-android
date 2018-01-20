@@ -1,11 +1,12 @@
 package us.buddman.ava.models
 
+import java.io.Serializable
 import java.util.*
 
 /**
  * Created by Chad Park on 2018-01-20.
  */
-data class Da(
+data class Da (
         var post_token: String,
         var author: String,
         var author_token: String,
@@ -14,4 +15,4 @@ data class Da(
         var date: Date,
         var photo: String
 
-)
+) : Serializable
