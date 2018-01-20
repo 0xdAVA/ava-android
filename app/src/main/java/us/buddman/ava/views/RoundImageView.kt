@@ -9,7 +9,7 @@ import android.net.Uri
 import android.util.AttributeSet
 import android.widget.ImageView
 import com.android.volley.toolbox.NetworkImageView
-import us.buddman.trumarket.R
+import us.buddman.ava.R
 
 
 /**
