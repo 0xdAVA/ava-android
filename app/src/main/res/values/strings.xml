@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">AVA</string>
-    <string name="facebook_app_id">224803198063152</string>
-    <string name="registerText"><![CDATA[아이디가 없으신가요?<b>회원가입</b>]]></string>
+    <string name="facebook_app_id">1649437005348937</string>
+    <string name="registerText"></string>
+    <string name="fb_login_protocol_scheme">fb1649437005348937</string>
 </resources>

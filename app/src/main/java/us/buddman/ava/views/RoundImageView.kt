@@ -9,13 +9,14 @@ import android.net.Uri
 import android.util.AttributeSet
 import android.widget.ImageView
 import com.android.volley.toolbox.NetworkImageView
+import com.facebook.drawee.view.SimpleDraweeView
 import us.buddman.ava.R
 
 
 /**
  * Created by kotohana5706 on 15. 7. 14.
  */
-class RoundImageView : ImageView {
+class RoundImageView : SimpleDraweeView {
 
     private val mDrawableRect = RectF()
     private val mBorderRect = RectF()

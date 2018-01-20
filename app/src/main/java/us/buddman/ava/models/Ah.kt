@@ -1,5 +1,6 @@
 package us.buddman.ava.models
 
+import us.buddman.ava.utils.DateHelper
 import java.io.Serializable
 import java.util.*
 
@@ -14,5 +15,9 @@ data class Ah(
         var text: String,
         var date: Date,
         var photo: String,
+        var profile_img : String,
         var like: Int
-) : Serializable
+) : Serializable {
+    var dateString: String = ""
+        get() = DateHelper.getDateString(date)
+}

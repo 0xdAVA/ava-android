@@ -10,7 +10,7 @@ data class Na(
         var state: Int,
         var title: String,
         var text: String,
-        var date: Date,
+        var date: String,
         var quality_status: Int,
         var tag: Int,
         var author: String,

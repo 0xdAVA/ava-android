@@ -1,0 +1,18 @@
+<tabs>
+    <tab
+        icon="@drawable/ic_tapbar_save_enabled"
+        id="@+id/main_ah"
+        title="아껴쓰다" />
+    <tab
+        icon="@drawable/ic_tapbar_change_enabled"
+        id="@+id/main_naba"
+        title="나바쓰다" />
+    <tab
+        icon="@drawable/ic_tapbar_recycle_enabled"
+        id="@+id/main_da"
+        title="다시쓰다" />
+    <tab
+        icon="@drawable/ic_tapbar_person_enabled"
+        id="@+id/main_mypage"
+        title="내 정보" />
+</tabs>

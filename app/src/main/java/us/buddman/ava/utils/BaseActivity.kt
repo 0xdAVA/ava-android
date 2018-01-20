@@ -8,11 +8,14 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.databinding.ViewDataBinding
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import us.buddman.ava.R
 
 /**
  * Created by Chad Park on 2017-10-27.
@@ -31,7 +34,8 @@ abstract class BaseActivity : AppCompatActivity() {
         if (toolbarId != 0) {
             toolbar = findViewById<View>(toolbarId) as Toolbar
             setSupportActionBar(toolbar)
-            toolbar.setTitleTextColor(Color.WHITE)
+            toolbar.setTitleTextColor(ContextCompat.getColor(applicationContext, R.color.colorPrimary))
+            toolbar.setBackgroundColor(Color.WHITE)
             toolbar.contentInsetStartWithNavigation = 0
             supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         }

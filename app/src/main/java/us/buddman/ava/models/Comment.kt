@@ -12,5 +12,5 @@ data class Comment(
        var text :  String,
        var post_token : String,
        var comment_token : String,
-       var date : Date
+       var date : String
 ) : Serializable

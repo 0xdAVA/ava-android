@@ -21,13 +21,13 @@ class CredentialsManager private constructor() {
         get() = preferences.getInt(LOGIN_TYPE, -1)
     val activeUser: Pair<Boolean, User>
         get() {
-            if (preferences.getBoolean(HAS_ACTIVE_USER, false)) {
+            return if (preferences.getBoolean(HAS_ACTIVE_USER, false)) {
                 val userType = preferences.getInt(LOGIN_TYPE, -1)
                 val user = Gson().fromJson(preferences.getString(USER_SCHEMA, ""), User::class.java)
                 user.userType = userType
-                return Pair.create(true, user)
+                Pair.create(true, user)
             } else
-                return Pair.create(false, null)
+                Pair.create(false, null)
         }
 
     val facebookUserCredential: String

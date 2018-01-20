@@ -12,7 +12,7 @@ data class Da (
         var author_token: String,
         var title: String,
         var text: String,
-        var date: Date,
+        var date: String,
         var photo: String
 
 ) : Serializable

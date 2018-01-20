@@ -17,17 +17,25 @@ import us.buddman.ava.models.User
 
 interface NetworkAPI {
 
+    @GET("/facebook/app")
+    fun facebookLogin(@Query("access_token") fbToken: String): Call<User>
+
+
     @POST("/auth/login")
     @FormUrlEncoded
-    fun localLogin(@Path("id") id: String, @Path("password") password: String): Call<User>
+    fun localLogin(@Field("id") id: String, @Field("password") password: String): Call<User>
+
+    @POST("/auth/auto")
+    @FormUrlEncoded
+    fun autoLogin(@Field("token") token: String): Call<User>
 
     @POST("/auth/register")
     @FormUrlEncoded
-    fun localRegister(@Path("username") username: String, @Path("id") id: String, @Path("password") password: String): Call<User>
+    fun localRegister(@Field("username") username: String, @Field("id") id: String, @Field("password") password: String): Call<User>
 
     @POST("/auth/edituser")
     @FormUrlEncoded
-    fun editUser(@Path("username") username: String, @Path("id") id: String, @Path("password") password: String): Call<User>
+    fun editUser(@Field("username") username: String, @Field("id") id: String, @Field("password") password: String): Call<User>
 
     @Multipart
     @POST("/auth/edituser/img")
@@ -52,57 +60,57 @@ interface NetworkAPI {
 
     @POST("/ah/post/myah")
     @FormUrlEncoded
-    fun getMyAhPostList(@Path("user_token") userToken: String): Call<ArrayList<Ah>>
+    fun getMyAhPostList(@Field("user_token") userToken: String): Call<ArrayList<Ah>>
 
     @POST("/ah/post/view")
     @FormUrlEncoded
-    fun getAhPostDetail(@Path("post_token") postToken: String): Call<Ah>
+    fun getAhPostDetail(@Field("post_token") postToken: String): Call<Ah>
 
     @POST("/ah/post/like")
     @FormUrlEncoded
-    fun likeAhPost(@Path("user_token") userToken: String, @Path("post_token") postToken: String): Call<ResponseBody>
+    fun likeAhPost(@Field("user_token") userToken: String, @Field("post_token") postToken: String): Call<ResponseBody>
 
     @POST("/ah/post/rank")
     fun getAh5thList(): Call<ArrayList<Ah>>
 
     @POST("/ah/comment/add")
     @FormUrlEncoded
-    fun addCommentAh(@Path("username") username: String,
-                     @Path("user_token") userToken: String,
-                     @Path("text") text: String,
-                     @Path("post_token") postToken: String
+    fun addCommentAh(@Field("username") username: String,
+                     @Field("user_token") userToken: String,
+                     @Field("text") text: String,
+                     @Field("post_token") postToken: String
     ): Call<ResponseBody>
 
     @POST("/ah/comment/view")
     @FormUrlEncoded
-    fun getAhCommentList(@Path("post_token") postToken: String
+    fun getAhCommentList(@Field("post_token") postToken: String
     ): Call<ArrayList<Comment>>
 
     @POST("/da/post/add")
     @FormUrlEncoded
-    fun addDaPost(@Path("username") username: String,
-                  @Path("user_token") userToken: String,
-                  @Path("title") title: String,
-                  @Path("text") text: String
+    fun addDaPost(@Field("username") username: String,
+                  @Field("user_token") userToken: String,
+                  @Field("title") title: String,
+                  @Field("text") text: String
     ): Call<ResponseBody>
 
     @POST("/da/post/myda")
     @FormUrlEncoded
-    fun getMyDaPostList(@Path("user_token") userToken: String): Call<ResponseBody>
+    fun getMyDaPostList(@Field("user_token") userToken: String): Call<ResponseBody>
 
     @POST("/da/post/view")
     @FormUrlEncoded
-    fun getDaPostDetail(@Path("post_token") postToken: String): Call<Da>
+    fun getDaPostDetail(@Field("post_token") postToken: String): Call<Da>
 
     @POST("/da/post/like")
     @FormUrlEncoded
-    fun likeDaPost(@Path("user_token") userToken: String, @Path("post_token") postToken: String): Call<ResponseBody>
+    fun likeDaPost(@Field("user_token") userToken: String, @Field("post_token") postToken: String): Call<ResponseBody>
 
     @POST("/da/post/rank")
     fun getDa5thList(): Call<ArrayList<Da>>
 
     @POST("/da/post/search")
     @FormUrlEncoded
-    fun searchDa(@Path("title") title : String): Call<ArrayList<Da>>
+    fun searchDa(@Field("title") title : String): Call<ArrayList<Da>>
 
 }

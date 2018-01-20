@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 
 object NetworkHelper {
-    private val url = "http://220.95.213.60/"
+    private val url = "http://soylatte.kr:3000"
     lateinit private var retrofit: Retrofit
     val instance: NetworkAPI
         get() {

@@ -11,7 +11,7 @@ data class Ba(
        var state : Number,
        var title : String,
        var text : String,
-       var date : Date,
+       var date : String,
        var quality_status : Number,
        var tag : Number,
        var author : String,

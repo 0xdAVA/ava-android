@@ -20,63 +20,83 @@
             android:layout_height="wrap_content"
             android:src="@drawable/pic_splash_logo" />
 
-        <EditText
-            android:id="@+id/emailInput"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="이메일"
-            android:inputType="textEmailAddress"
-            android:singleLine="true" />
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/passwordInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="비밀번호"
-            android:inputType="textPassword"
-            android:singleLine="true" />
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="invisible">
 
-        <Button
-            android:id="@+id/loginButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/login_btn_bg"
-            android:clickable="true"
-            android:text="로그인"
-            android:textColor="#FFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/emailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="이메일"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true" />
 
-        <TextView
-            android:id="@+id/registerButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/registerText" />
+                <EditText
+                    android:id="@+id/passwordInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="비밀번호"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
 
-        <Button
-            android:id="@+id/fbButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/fb_btn_bg"
-            android:clickable="true"
-            android:text="Facebook으로 로그인"
-            android:textAllCaps="false"
-            android:textColor="#FFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+                <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/login_btn_bg"
+                    android:clickable="true"
+                    android:text="로그인"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-        <com.facebook.login.widget.LoginButton
-            android:id="@+id/realFacebookButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone" />
+                <TextView
+                    android:id="@+id/registerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/registerText" />
+
+                <Button
+                    android:id="@+id/fbButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/fb_btn_bg"
+                    android:clickable="true"
+                    android:text="Facebook으로 로그인"
+                    android:textAllCaps="false"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/realFacebookButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
     </LinearLayout>
 </RelativeLayout>
